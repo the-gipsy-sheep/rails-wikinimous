@@ -1,0 +1,11 @@
+<div class="container mt-3 text-center p-5">
+  <h1>Aca tenemos que listar todos los articulos</h1>
+
+  <% @articles.each do |article| %>
+    <div class="p-2">
+      <h3><%= link_to "#{article.title}", article_path(article) %></h3>
+    </div>
+  <% end %>
+
+  <%= link_to "Create a article", new_article_path, class: "btn btn-primary" %>
+</div>
